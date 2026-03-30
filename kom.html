@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trixon_UA Community</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body { 
+            font-family: 'Segoe UI', sans-serif; 
+            background-color: #050505; 
+            color: white; 
+            margin: 0; 
+            padding: 0; 
+            padding-top: 130px; 
+            text-align: center;
+            scroll-behavior: smooth;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(15, 15, 15, 0.98);
+            display: flex;
+            flex-direction: column; 
+            align-items: center;
+            padding: 10px 40px;
+            box-sizing: border-box;
+            border-bottom: 3px solid #ff0000;
+            box-shadow: 0 5px 20px rgba(255, 0, 0, 0.4);
+            z-index: 1000;
+            backdrop-filter: blur(5px);
+        }
+
+        .nav-contacts {
+            font-size: 0.8rem;
+            color: #aaa;
+            margin-bottom: 10px;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .nav-contacts span { color: #eee; }
+        .nav-contacts i { color: #ff0000; margin-right: 5px; }
+
+        .nav-main {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.6rem;
+            font-weight: 900;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 10px #ff0000;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 15px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #ccc;
+            font-weight: 600;
+            transition: 0.3s;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+        }
+
+        .nav-links a:hover { color: #ff0000; text-shadow: 0 0 8px #ff0000; }
+
+        .social-buttons {
+            display: flex;
+            gap: 8px;
+        }
+
+        .btn-social {
+            padding: 8px 12px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            text-decoration: none;
+            color: white;
+            transition: 0.3s;
+        }
+
+        .btn-yt { background: #ff0000; }
+        .btn-x { background: #000; border: 1px solid #333; }
+        .btn-inst { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+        .btn-rb { background: #393b3d; }
+
+        .btn-social:hover { transform: scale(1.1); }
+
+        .hero {
+            padding: 40px 20px;
+            background: radial-gradient(circle, rgba(255,0,0,0.15) 0%, rgba(0,0,0,1) 80%);
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin: 0;
+            text-transform: uppercase;
+            text-shadow: 0 0 20px #ff0000;
+        }
+
+        .games-section {
+            padding: 40px 20px;
+        }
+
+        .card-game {
+            background: #111;
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 40px;
+            border-radius: 25px;
+            border: 2px solid #222;
+            transition: 0.4s;
+            text-decoration: none;
+            color: white;
+            display: block;
+        }
+
+        .card-game:hover {
+            border-color: #f68802;
+            box-shadow: 0 0 40px rgba(246, 136, 2, 0.4);
+            transform: translateY(-5px);
+        }
+
+        .btn-play {
+            display: inline-block;
+            margin-top: 20px;
+            background: #f68802;
+            color: white;
+            padding: 15px 35px;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            padding: 30px 40px;
+            flex-wrap: wrap;
+        }
+
+        .card-small {
+            background: #111;
+            padding: 25px;
+            border-radius: 20px;
+            border: 1px solid #222;
+            width: 320px;
+            text-decoration: none;
+            color: white;
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card-small:hover { border-color: #ff0000; transform: translateY(-5px); }
+        .card-rec:hover { border-color: #a020f0; }
+
+        .btn-tg {
+            display: inline-block;
+            margin-top: 15px;
+            background: #0088cc;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        .btn-tg:hover { background: #00a2f5; box-shadow: 0 0 10px #0088cc; }
+
+        footer {
+            margin-top: 60px;
+            padding: 30px;
+            color: #444;
+            border-top: 1px solid #222;
+        }
+
+        h2 {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-contacts">
+            <span><i class="fas fa-envelope"></i> trixongamer2013@gmail.com</span>
+            <span><i class="fas fa-phone"></i> Менеджер: +380 951-25-27-96</span>
+        </div>
+        <div class="nav-main">
+            <div class="logo">Trixon_UA</div>
+            <ul class="nav-links">
+                <li><a href="#">Головна</a></li>
+                <li><a href="#my-games">Мої Ігри</a></li>
+                <li><a href="#friends">Команда</a></li>
+                <li><a href="#recommended">Рекомендую</a></li>
+            </ul>
+            <div class="social-buttons">
+                <a href="https://www.youtube.com/@Trixon_UA" target="_blank" class="btn-social btn-yt"><i class="fab fa-youtube"></i></a>
+                <a href="https://x.com/Trixon_UA" target="_blank" class="btn-social btn-x"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://www.instagram.com/trixon_ua/" target="_blank" class="btn-social btn-inst"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.roblox.com/users/9550080357/profile" target="_blank" class="btn-social btn-rb"><i class="fas fa-user"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <h1>Trixon_UA</h1>
+        <p style="color: #888;">Офіційний сайт ігрової спільноти</p>
+    </div>
+
+    <div class="games-section" id="my-games">
+        <h2 style="color: #f68802;">🎮 МОЇ ROBLOX ІГРИ</h2>
+        <a href="https://www.roblox.com/games/139785117336819/Fun-City-Life" target="_blank" class="card-game">
+            <h3 style="font-size: 2.5rem; margin-bottom: 10px; color: #f68802;">🏙️ Fun City Life</h3>
+            <p style="font-size: 1.1rem; color: #ccc;">Стань частиною великого міста! Будуй кар'єру та розважайся у моєму проекті.</p>
+            <span class="btn-play">ГРАТИ ЗАРАЗ</span>
+        </a>
+    </div>
+
+    <h2 id="friends">YouTube Канали</h2>
+    <div class="container">
+        <div class="card-small">
+            <a href="https://www.youtube.com/@Trixon_UA" target="_blank" style="text-decoration: none; color: inherit;">
+                <h3 style="color: #ff0000;">Trixon_UA</h3>
+                <p>Roblox, гайди та стріми. Приєднуйся до нас на YouTube, щоб не пропустити нові відео!</p>
+            </a>
+            <a href="https://t.me/trixon_ua" target="_blank" class="btn-tg">
+                <i class="fab fa-telegram"></i> Мій Telegram
+            </a>
+        </div>
+        
+        <div class="card-small">
+            <a href="https://www.youtube.com/@Mr_Anton2013" target="_blank" style="text-decoration: none; color: inherit;">
+                <h3 style="color: #00d2ff;">Mr.Pixel</h3>
+                <p>Класний контент-мейкер, мій друг, підпишись і на нього, там багато цікавого!</p>
+            </a>
+            <a href="https://t.me/Anton2013x6" target="_blank" class="btn-tg">
+                <i class="fab fa-telegram"></i> Telegram Mr.Pixel
+            </a>
+        </div>
+    </div>
+
+    <h2 id="recommended" style="color: #a020f0;">✨ РЕКОМЕНДУЮ ГЛЯНУТИ</h2>
+    <div class="container">
+        <a href="https://www.youtube.com/@_ellevika" target="_blank" class="card-small card-rec">
+            <h3 style="color: #a020f0;">_ellevika</h3>
+            <p>Цікавий контент на YouTube. Я просто рекомендую зайти та подивитися!</p>
+        </a>
+        <a href="https://www.youtube.com/@weezzykk" target="_blank" class="card-small card-rec">
+            <h3 style="color: #a020f0;">weezzykk</h3>
+            <p>Класний канал нашого ком'юніті. Просто рекомендую підписатися!</p>
+        </a>
+    </div>
+
+    <footer>
+        &copy; 2026 Trixon_UA Community
+    </footer>
+
+</body>
+</html>
